@@ -14,7 +14,7 @@ export default function HelloWorldPost() {
     <div className="wrap py-16 sm:py-20">
       <article className="max-w-2xl">
         <header>
-          <h1 className="text-[clamp(2rem,5vw,3rem)] leading-tight tracking-[-0.015em] lowercase">
+          <h1 className="text-[clamp(1.75rem,3.5vw,2.25rem)] leading-tight tracking-[-0.015em] lowercase">
             {post.title}
           </h1>
           <time dateTime={post.date} className="mt-3 block text-sm text-muted">

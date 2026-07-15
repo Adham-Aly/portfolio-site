@@ -10,7 +10,7 @@ export default function ExperiencePage() {
   return (
     <section className="wrap py-16 sm:py-20">
       <header className="max-w-2xl">
-        <h1 className="text-[clamp(2rem,5vw,3rem)] leading-tight tracking-[-0.015em] lowercase">
+        <h1 className="text-[clamp(1.75rem,3.5vw,2.25rem)] leading-tight tracking-[-0.015em] lowercase">
           experience
         </h1>
         <p className="mt-4 text-muted">where i&rsquo;ve been spending my time.</p>

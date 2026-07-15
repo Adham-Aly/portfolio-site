@@ -11,7 +11,7 @@ export default function ProjectsPage() {
   return (
     <section className="wrap py-16 sm:py-20">
       <header className="max-w-2xl">
-        <h1 className="text-[clamp(2rem,5vw,3rem)] leading-tight tracking-[-0.015em] lowercase">
+        <h1 className="text-[clamp(1.75rem,3.5vw,2.25rem)] leading-tight tracking-[-0.015em] lowercase">
           projects
         </h1>
         <p className="mt-4 text-muted">
