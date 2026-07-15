@@ -1,7 +1,14 @@
+import { siteConfig } from "@/lib/site";
+
 export default function Home() {
   return (
-    <main className="flex flex-1 items-center justify-center p-8">
-      <h1 className="text-2xl font-medium tracking-tight">Hello, world</h1>
-    </main>
+    <section className="wrap pt-20 pb-28 sm:pt-28 lg:pt-36">
+      <h1 className="text-[clamp(2.75rem,9vw,5.75rem)] leading-[0.95] tracking-[-0.02em] lowercase">
+        adham aly
+      </h1>
+      <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80 sm:text-xl lowercase">
+        {siteConfig.tagline}
+      </p>
+    </section>
   );
 }
