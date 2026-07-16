@@ -39,10 +39,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${libreBaskerville.variable} h-full`}>
-      <body className="flex min-h-full flex-col antialiased">
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="min-h-full antialiased">
+        <div className="mx-auto w-full max-w-[52rem] px-6 pt-16 pb-24 sm:px-8 sm:pt-24">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-0">
+            <Nav />
+            <div className="min-w-0 flex-1 sm:pl-10">
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

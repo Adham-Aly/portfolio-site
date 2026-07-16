@@ -11,41 +11,35 @@ export const metadata: Metadata = {
 
 export default function HelloWorldPost() {
   return (
-    <div className="wrap py-16 sm:py-20">
-      <article className="max-w-2xl">
-        <header>
-          <h1 className="text-[clamp(1.75rem,3.5vw,2.25rem)] leading-tight tracking-[-0.015em] lowercase">
-            {post.title}
-          </h1>
-          <time dateTime={post.date} className="mt-3 block text-sm text-muted">
-            {formatDate(post.date)}
-          </time>
-        </header>
+    <article>
+      <h1 className="text-lg font-bold lowercase">{post.title}</h1>
+      <time dateTime={post.date} className="mt-1 block text-sm text-muted">
+        {formatDate(post.date)}
+      </time>
 
-        <div className="mt-8 space-y-5 leading-relaxed text-foreground/90">
-          <p>
-            Welcome, and thanks for stopping by. This is the first post on what I
-            hope becomes a running log of the things I build, break, and learn
-            along the way.
-          </p>
-          <p>
-            I spend most of my time somewhere between machine learning, low-level
-            systems, and open source, so expect notes on the projects I&rsquo;m
-            working on, ideas I&rsquo;m still chewing on, and the occasional deep
-            dive for when something finally clicks.
-          </p>
-          <p>More soon.</p>
-        </div>
+      <div className="mt-6 space-y-5 leading-relaxed">
+        <p>
+          Welcome, and thanks for stopping by. This is the first post on what I
+          hope becomes a running log of the things I build, break, and learn
+          along the way.
+        </p>
+        <p>
+          I spend most of my time somewhere between machine learning, low-level
+          systems, and open source, so expect notes on the projects I&rsquo;m
+          working on, ideas I&rsquo;m still chewing on, and the occasional deep
+          dive for when something finally clicks.
+        </p>
+        <p>More soon.</p>
+      </div>
 
-        <footer className="mt-14">
-          <Link
-            href="/blog"
-            className="text-sm text-muted transition-colors hover:text-foreground"
-          >
-            ← back to blog
-          </Link>
-        </footer>
-      </article>
-    </div>
+      <div className="mt-10">
+        <Link
+          href="/blog"
+          className="text-sm italic text-muted transition-colors hover:text-foreground"
+        >
+          ← back to blog
+        </Link>
+      </div>
+    </article>
   );
 }

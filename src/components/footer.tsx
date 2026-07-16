@@ -2,37 +2,28 @@ import { siteConfig } from "@/lib/site";
 
 const { github, linkedin, resume, email } = siteConfig.links;
 
-const externalLinks = [
-  { label: "GitHub", href: github },
-  { label: "LinkedIn", href: linkedin },
-  { label: "Résumé", href: resume },
+const links = [
+  { label: "github", href: github, external: true },
+  { label: "linkedin", href: linkedin, external: true },
+  { label: "résumé", href: resume, external: true },
+  { label: "email", href: `mailto:${email}`, external: false },
 ];
 
 export function Footer() {
   return (
-    <footer>
-      <div className="wrap flex flex-wrap items-center gap-x-6 gap-y-3 py-10 text-sm text-muted">
-        {externalLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            {link.label}
-          </a>
-        ))}
+    <footer className="mt-14 flex flex-wrap gap-x-5 gap-y-2 text-sm italic text-muted">
+      {links.map((link) => (
         <a
-          href={`mailto:${email}`}
+          key={link.label}
+          href={link.href}
+          {...(link.external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
           className="transition-colors hover:text-foreground"
         >
-          Email
+          {link.label}
         </a>
-        <span className="w-full text-muted/70 sm:ml-auto sm:w-auto">
-          © {new Date().getFullYear()} {siteConfig.name}
-        </span>
-      </div>
+      ))}
     </footer>
   );
 }
