@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Adham Aly",
-  // One-sentence intro rendered on the home page (kept deliberately lowercase).
+  // One-sentence intro rendered on the home page.
   tagline:
-    "incoming computer science student at the university of toronto, building toward ai engineering and always tinkering with machine learning, robotics, and open source.",
+    "Incoming computer science student at the University of Toronto, building toward AI engineering and always tinkering with machine learning, robotics, and open source.",
   // Sentence-case version used for SEO / social metadata.
   description:
     "Adham Aly is a computer science student and aspiring AI engineer interested in machine learning, robotics, and open source.",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageHeader } from "@/components/page-header";
 import { formatDate, getPost } from "@/lib/posts";
 
 const post = getPost("hello-world")!;
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
 export default function HelloWorldPost() {
   return (
     <article>
-      <h1 className="text-lg font-bold lowercase">{post.title}</h1>
+      <PageHeader title={post.title} nav="home" />
+
       <time dateTime={post.date} className="mt-1 block text-sm text-muted">
         {formatDate(post.date)}
       </time>
@@ -37,7 +39,7 @@ export default function HelloWorldPost() {
           href="/blog"
           className="text-sm italic text-muted transition-colors hover:text-foreground"
         >
-          ← back to blog
+          ← Back to blog
         </Link>
       </div>
     </article>

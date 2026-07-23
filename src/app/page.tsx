@@ -1,3 +1,4 @@
+import { PageHeader } from "@/components/page-header";
 import { siteConfig } from "@/lib/site";
 import { experience } from "@/lib/experience";
 import { projects } from "@/lib/projects";
@@ -5,12 +6,12 @@ import { projects } from "@/lib/projects";
 export default function Home() {
   return (
     <div>
-      <h1 className="text-lg font-bold">adham aly</h1>
+      <PageHeader title="Adham Aly" nav="blog" />
 
       <p className="mt-6 leading-relaxed">{siteConfig.tagline}</p>
 
       <section className="mt-12">
-        <h2 className="text-muted">experience</h2>
+        <h2 className="text-muted">Experience</h2>
 
         <div className="mt-3 space-y-8">
           {experience.map((role) => (
@@ -43,7 +44,7 @@ export default function Home() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-muted">projects</h2>
+        <h2 className="text-muted">Projects</h2>
 
         <div className="mt-3 space-y-8">
           {projects.map((project) => (

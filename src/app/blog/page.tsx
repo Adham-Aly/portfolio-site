@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageHeader } from "@/components/page-header";
 import { posts, formatDate } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -13,14 +14,19 @@ export default function BlogPage() {
 
   return (
     <div>
-      <h1 className="text-lg font-bold lowercase">blog</h1>
+      <PageHeader title="Blog" nav="home" />
+
       <p className="mt-3 text-muted">
-        notes, writing, and the occasional deep dive.
+        Notes, writing, and the occasional deep dive.
       </p>
 
       <div className="mt-8 space-y-6">
         {sortedPosts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group block"
+          >
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
               <span className="underline-offset-4 group-hover:underline">
                 {post.title}
