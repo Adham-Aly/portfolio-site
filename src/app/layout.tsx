@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
-import { Nav } from "@/components/nav";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import { siteConfig } from "@/lib/site";
 
 // Libre Baskerville is not a variable font, so weights are specified explicitly.
@@ -40,14 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${libreBaskerville.variable} h-full`}>
       <body className="min-h-full antialiased">
-        <div className="mx-auto w-full max-w-[52rem] px-6 pt-16 pb-24 sm:px-8 sm:pt-24">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-0">
-            <Nav />
-            <div className="min-w-0 flex-1 sm:pl-10">
-              <main>{children}</main>
-              <Footer />
-            </div>
-          </div>
+        <div className="px-6 pt-8 pb-24 sm:px-10 sm:pt-10">
+          <Header />
+          <main className="mx-auto mt-20 max-w-xl sm:mt-28">{children}</main>
         </div>
       </body>
     </html>
