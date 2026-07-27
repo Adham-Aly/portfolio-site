@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/json-ld";
 import { PageHeader } from "@/components/page-header";
-import { posts, formatDate } from "@/lib/posts";
+import { blogDescription, posts, formatDate } from "@/lib/posts";
+import { baseOpenGraph, baseTwitter } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
+import { blogJsonLd } from "@/lib/structured-data";
+
+const title = `Blog · ${siteConfig.name}`;
 
 export const metadata: Metadata = {
   title: "Blog",
-  description:
-    "Writing and notes by Adham Aly on AI, software, and open source.",
+  description: blogDescription,
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    ...baseOpenGraph,
+    type: "website",
+    url: "/blog",
+    title,
+    description: blogDescription,
+  },
+  twitter: { ...baseTwitter, title, description: blogDescription },
 };
 
 export default function BlogPage() {
@@ -14,6 +28,8 @@ export default function BlogPage() {
 
   return (
     <div>
+      <JsonLd data={blogJsonLd(blogDescription)} />
+
       <PageHeader title="Blog" nav="home" />
 
       <p className="mt-3 text-muted">

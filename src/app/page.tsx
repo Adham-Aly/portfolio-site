@@ -1,11 +1,23 @@
+import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
 import { PageHeader } from "@/components/page-header";
 import { siteConfig } from "@/lib/site";
+import { homeJsonLd } from "@/lib/structured-data";
 import { experience } from "@/lib/experience";
 import { projects } from "@/lib/projects";
+
+// Title, description, openGraph and twitter are all inherited from the root
+// layout, which already describes the site as a whole. Only the canonical is
+// page-specific.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <div>
+      <JsonLd data={homeJsonLd()} />
+
       <PageHeader title="Adham Aly" nav="blog" />
 
       <p className="mt-6 leading-relaxed">{siteConfig.tagline}</p>
