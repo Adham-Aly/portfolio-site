@@ -1,7 +1,7 @@
 // One-sentence intro. Rendered on the home page and reused verbatim as the
 // SEO / social description, so the two can never drift apart.
 const tagline =
-  "Incoming computer science student at the University of Toronto, and an AI Engineer, deeply interested in machine learning, automation/robotics, and open source.";
+  "First-year computer science student at the University of Toronto, and an AI Engineer, deeply interested in machine learning, automation/robotics, and open source.";
 
 // Absolute origin for canonical URLs, the sitemap, robots.txt and og:url.
 // Every SEO route derives from this one value, so pointing the site at a new
