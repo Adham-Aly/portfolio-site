@@ -10,7 +10,7 @@ export type Post = {
 // data) — distinct from the site-wide intro in src/lib/site.ts, which
 // describes the person rather than this one section.
 export const blogDescription =
-  "Writing and notes by Adham Aly on AI, software, and open source.";
+  "My Writings and Notes.";
 
 // Registry used by the blog index. Each post also has its own page under
 // src/app/blog/<slug>/page.tsx — add a folder there and an entry here to

@@ -11,17 +11,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "LLM Inference Engine",
+    title: "Character Identification Neural Network from Scratch",
     stack: ["C++"],
     description:
-      "A transformer language model written from scratch in C++ with no machine-learning libraries, implementing the attention mechanism and core math routines by hand and multithreading them to run efficiently on a standard CPU.",
+      "From scratch flattened multi-layer perceptron trained on the MNIST dataset to recognize numbers and letters. Implemented completely from scratch in C++ with no libraries.",
     href: "",
   },
   {
-    title: "Custom x86 Kernel",
-    stack: ["C", "x86 Assembly", "QEMU"],
+    title: "GPT-Style Transformer Language Model",
+    stack: ["C++"],
     description:
-      "A small operating-system kernel that boots on its own hardware, sets up memory segmentation, and handles interrupts and device drivers to print to the screen and respond to keyboard input in real time.",
+      "Built a GPT-style transformer language model from scratch in C++ with no external libraries, implementing multi-head self-attention, layer normalization, manual backpropagation, and Adam optimization to train a character-level text generator.",
     href: "",
   },
   {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     stack: ["TypeScript", "Next.js", "Docker"],
     description:
       "A co-founded, open-source competitive-programming judge that compiles and grades untrusted submissions inside isolated Docker containers, now serving several school-board schools and powering the WOSS Dual Olympiad.",
-    href: "",
+    href: "https://github.com/WMOJ",
   },
   {
     title: "Scire",
@@ -38,6 +38,6 @@ export const projects: Project[] = [
     stack: ["Next.js", "React", "TypeScript"],
     description:
       "A full-stack tutoring platform with tutor-tutee matching, scheduling, session tracking, and admin dashboards, deployed in an active high-school tutoring club.",
-    href: "",
+    href: "https://app.tutoringapp.ca/",
   },
 ];
