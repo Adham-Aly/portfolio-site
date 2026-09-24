@@ -3,41 +3,37 @@ export type Project = {
   // Optional descriptor shown under the title (e.g. what the project is).
   subtitle?: string;
   stack: string[];
-  description: string;
-  // Placeholder for now. Drop the project URL in here and it becomes a live
-  // link automatically (opens in a new tab).
+  highlights: string[];
+  // The live project. The title becomes a link to it (opens in a new tab).
   href: string;
+  // Optional source repository, shown as a "Source" link beside the subtitle.
+  repo?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Character Identification Neural Network from Scratch",
-    stack: ["C++"],
-    description:
-      "From scratch flattened multi-layer perceptron trained on the MNIST dataset to recognize numbers and letters. Implemented completely from scratch in C++ with no libraries.",
-    href: "",
-  },
-  {
-    title: "GPT-Style Transformer Language Model",
-    stack: ["C++"],
-    description:
-      "Built a GPT-style transformer language model from scratch in C++ with no external libraries, implementing multi-head self-attention, layer normalization, manual backpropagation, and Adam optimization to train a character-level text generator.",
-    href: "",
-  },
-  {
     title: "WMOJ",
     subtitle: "Competitive-programming online judge",
-    stack: ["TypeScript", "Next.js", "Docker"],
-    description:
-      "A co-founded, open-source competitive-programming judge that compiles and grades untrusted submissions inside isolated Docker containers, now serving several school-board schools and powering the WOSS Dual Olympiad.",
-    href: "https://github.com/WMOJ",
+    stack: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],
+    href: "https://wmoj.ca",
+    repo: "https://github.com/wmoj",
+    highlights: [
+      "Co-founded WMOJ, an open-source competitive-programming judge with 80 problems, timed contests, and live leaderboards, used by 3+ Halton District School Board schools and running the WOSS Dual Olympiad and TriOlympiad.",
+      "Built the grading server that compiles and runs untrusted Python and C++ code inside an nsjail sandbox, with a custom seccomp filter that blocks network access and process tampering, plus CPU, memory, and output limits.",
+      "Found and fixed a bug that had graded 94 real timeouts as wrong answers, writing a small C program that records each run's exact CPU time and memory use.",
+      "Wrote 190+ unit tests and 39 recorded end-to-end grading scenarios that CI replays against the real Docker image on every push and nightly.",
+      "Ran a security review of the web app that fixed 70 defects, adding 64 PostgreSQL row-level security policies and closing holes that exposed answer keys and student code and let anyone forge submissions.",
+    ],
   },
   {
     title: "Scire",
     subtitle: "Peer-to-peer tutoring LMS",
     stack: ["Next.js", "React", "TypeScript"],
-    description:
-      "A full-stack tutoring platform with tutor-tutee matching, scheduling, session tracking, and admin dashboards, deployed in an active high-school tutoring club.",
-    href: "https://app.tutoringapp.ca/",
+    href: "https://app.tutoringapp.ca",
+    repo: "https://github.com/scire-apps",
+    highlights: [
+      "Built Scire, a full-stack tutoring learning-management system in Next.js, React, and TypeScript, with tutor-tutee matching and scheduling, session tracking, and admin dashboards.",
+      "Deployed it into active use at a high-school tutoring club to coordinate and track sessions; currently pursuing Halton District School Board approval to expand district-wide.",
+    ],
   },
 ];

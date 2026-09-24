@@ -28,7 +28,6 @@ export default function Home() {
         <div className="mt-3 space-y-8">
           {experience.map((role) => (
             <div key={`${role.role}-${role.organization}`}>
-              {/* Placeholder link — add a URL in src/lib/experience.ts */}
               <a
                 href={role.href}
                 target="_blank"
@@ -62,7 +61,6 @@ export default function Home() {
           {projects.map((project) => (
             <div key={project.title}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-                {/* Placeholder link — real project URL goes in src/lib/projects.ts */}
                 <a
                   href={project.href}
                   target="_blank"
@@ -75,10 +73,34 @@ export default function Home() {
                   {project.stack.join(" · ")}
                 </span>
               </div>
-              {project.subtitle ? (
-                <p className="text-sm italic text-muted">{project.subtitle}</p>
+              {project.subtitle || project.repo ? (
+                <p className="mt-0.5 text-sm text-muted">
+                  {project.subtitle ? (
+                    <span className="italic">{project.subtitle}</span>
+                  ) : null}
+                  {project.subtitle && project.repo ? " · " : null}
+                  {project.repo ? (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-foreground"
+                    >
+                      Source
+                    </a>
+                  ) : null}
+                </p>
               ) : null}
-              <p className="mt-1.5 leading-relaxed">{project.description}</p>
+              <ul className="mt-3 space-y-1.5">
+                {project.highlights.map((highlight, index) => (
+                  <li key={index} className="flex gap-2.5 leading-relaxed">
+                    <span aria-hidden className="select-none text-muted">
+                      ›
+                    </span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
