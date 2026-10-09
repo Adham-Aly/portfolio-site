@@ -12,6 +12,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Multi-Agent Coding Workflow",
+    subtitle: "Open-source agent skill",
+    stack: ["Claude Code", "Codex", "Cursor", "Jev"],
+    href: "https://github.com/Adham-Aly/implement-loop",
+    highlights: [
+      "Built an open-source agent skill for Claude Code, Codex, and Cursor that runs a coding task through planning, implementation, and review, each phase owned by an orchestrator agent with up to 4 subagents, so the main session only briefs them, gates their reports, and talks to the user.",
+      "Routes each subagent to a model and reasoning effort with Jev, TypeSafe's fast decision model, sending lookups and small edits to a cheap model and design work to a frontier model at high effort, cutting the cost of a run.",
+      "Uses the same decision model to choose when to compact an agent's context, keeping decisions, blockers, and next steps and dropping stale tool output, so long runs stay inside the context window.",
+      "Runs every task on its own git worktree and branch, hands context between phases through short files instead of the main session, and has the review phase run the project's own tests and an end-to-end check before offering to commit, push, and merge.",
+    ],
+  },
+  {
     title: "WMOJ",
     subtitle: "Competitive-programming online judge",
     stack: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],

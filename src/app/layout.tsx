@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     "Adham Aly",
     "AI Engineer",
     "Machine Learning",
+    "Large Language Models",
+    "AI Agents",
     "Automation",
     "Robotics",
     "Computer Science",

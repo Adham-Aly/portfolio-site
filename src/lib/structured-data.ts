@@ -21,6 +21,8 @@ const person = {
   knowsAbout: [
     "Artificial Intelligence",
     "Machine Learning",
+    "Large Language Models",
+    "AI Agents",
     "Automation",
     "Robotics",
     "Open Source",
