@@ -27,7 +27,7 @@ export const experience: Experience[] = [
     organization: "White Oaks Secondary School",
     location: "Oakville, ON",
     period: "Sept 2024 – July 2026",
-    href: "https://triolympiad.ca",
+    href: "https://www.triolympiad.ca/",
     highlights: [
       "Directed the WOSS TriOlympiad, a free three-day physics, math, and computer-science competition with solo and team rounds, drawing 100+ interested students from across the Halton District School Board.",
       "Coordinated a 16-person organizing team across the school's Math, Physics, and Computer Science clubs to write original contest problems and run the event, and led sponsorship outreach with tiered packages from $100 to $1,500.",
