@@ -43,7 +43,7 @@ const milestones = [
     date: "2027-01-08",
     title: "Predict the next token",
     description:
-      "Build the simplest possible next-token predictor: a bigram baseline, with sample text generation.",
+      "Build a simple next-token predictor: a bigram baseline with sample text generation.",
   },
   {
     date: "2027-01-29",
@@ -84,7 +84,7 @@ export default function MlRoadmapPost() {
           delivers a high long-term ROI.
         </p>
 
-        <ol className="space-y-5">
+        <ol role="list" className="space-y-5">
           {milestones.map((milestone) => (
             <li
               key={milestone.date}
