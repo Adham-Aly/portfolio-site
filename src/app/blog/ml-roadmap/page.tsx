@@ -34,19 +34,19 @@ const milestones = [
       "Build a basic neural network on MNIST and measure its accuracy on held-out data.",
   },
   {
-    date: "2026-12-04",
+    date: "2026-11-30",
     title: "Move from digits to letters",
     description:
       "Extend the classifier to handwritten letters using EMNIST Letters.",
   },
   {
-    date: "2026-12-18",
+    date: "2026-12-15",
     title: "Predict the next token",
     description:
       "Build a simple next-token predictor: a bigram baseline with sample text generation.",
   },
   {
-    date: "2027-01-08",
+    date: "2027-01-06",
     title: "Introduce attention",
     description:
       "Train a small transformer for next-token prediction and compare it against the baseline.",
