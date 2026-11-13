@@ -28,31 +28,31 @@ export const metadata: Metadata = {
 
 const milestones = [
   {
-    date: "2026-11-27",
+    date: "2026-11-20",
     title: "Recognize handwritten digits",
     description:
       "Build a basic neural network on MNIST and measure its accuracy on held-out data.",
   },
   {
-    date: "2026-12-11",
+    date: "2026-12-04",
     title: "Move from digits to letters",
     description:
       "Extend the classifier to handwritten letters using EMNIST Letters.",
   },
   {
-    date: "2027-01-08",
+    date: "2026-12-18",
     title: "Predict the next token",
     description:
       "Build a simple next-token predictor: a bigram baseline with sample text generation.",
   },
   {
-    date: "2027-01-29",
+    date: "2027-01-08",
     title: "Introduce attention",
     description:
       "Train a small transformer for next-token prediction and compare it against the baseline.",
   },
   {
-    date: "2027-02-26",
+    date: "2027-01-31",
     title: "Build a transformer chessbot",
     description:
       "Train on Lichess games to predict moves, constrain play to legal moves, and evaluate against a simple baseline.",

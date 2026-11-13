@@ -21,7 +21,7 @@ export const posts: Post[] = [
     title: "From MNIST to a Chess Transformer",
     date: "2026-11-12",
     excerpt:
-      "My machine learning roadmap for November 2026–February 2027: handwritten digits, next-token prediction, and a transformer chessbot.",
+      "My machine learning roadmap for November 2026–January 2027: handwritten digits, next-token prediction, and a transformer chessbot.",
   },
   {
     slug: "hello-world",
