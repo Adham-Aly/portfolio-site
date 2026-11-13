@@ -77,6 +77,13 @@ export default function MlRoadmapPost() {
           Five projects, each building on the last.
         </p>
 
+        <p>
+          I emphasize <strong>quality over quantity</strong>. By choosing to learn
+          things more deeply than most of my peers, I believe I&rsquo;m investing
+          in my future self: building knowledge that compounds over time and
+          delivers a high long-term ROI.
+        </p>
+
         <ol className="space-y-5">
           {milestones.map((milestone) => (
             <li
