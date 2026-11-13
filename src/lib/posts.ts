@@ -17,6 +17,13 @@ export const blogDescription =
 // publish a new post.
 export const posts: Post[] = [
   {
+    slug: "ml-roadmap",
+    title: "From MNIST to a Chess Transformer",
+    date: "2026-11-12",
+    excerpt:
+      "My machine learning roadmap for November 2026–February 2027: handwritten digits, next-token prediction, and a transformer chessbot.",
+  },
+  {
     slug: "hello-world",
     title: "Hello World",
     date: "2026-07-15",
