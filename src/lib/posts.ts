@@ -17,6 +17,13 @@ export const blogDescription =
 // publish a new post.
 export const posts: Post[] = [
   {
+    slug: "human-like-chess",
+    title: "Teaching a Transformer to Play Chess Like a Human",
+    date: "2026-11-19",
+    excerpt:
+      "Chess engines are too strong to learn from, and weakened ones still don't play like people. So I'm training a transformer on Lichess games to play like a real human at a chosen rating.",
+  },
+  {
     slug: "ml-roadmap",
     title: "From MNIST to a Chess Transformer",
     date: "2026-11-12",
