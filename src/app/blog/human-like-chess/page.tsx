@@ -6,6 +6,12 @@ import { formatDate, getPost } from "@/lib/posts";
 import { baseOpenGraph, baseTwitter } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import { postJsonLd } from "@/lib/structured-data";
+import { Figure } from "./_figures/figure";
+import { GameToTokens } from "./_figures/game-to-tokens";
+import { MoveChoices } from "./_figures/move-choices";
+import { SystemOverview } from "./_figures/system-overview";
+import { TransformerSketch } from "./_figures/transformer-sketch";
+import { TwoApproaches } from "./_figures/two-approaches";
 
 const post = getPost("human-like-chess")!;
 const title = `${post.title} · ${siteConfig.name}`;
@@ -72,6 +78,13 @@ export default function HumanLikeChessPost() {
           compared to conventional chess bots.
         </p>
 
+        <Figure
+          number={1}
+          caption="Two ways to build a 1200-level opponent. Today’s bots start superhuman and get held back; this project starts from how 1200-rated people actually play."
+        >
+          <TwoApproaches />
+        </Figure>
+
         <h2 className="pt-3 font-bold">The plan</h2>
 
         <p>
@@ -83,6 +96,13 @@ export default function HumanLikeChessPost() {
           what comes next, the same way a language model predicts the next
           word.
         </p>
+
+        <Figure
+          number={2}
+          caption="The model only ever gets the moves as text, never the board, so it has to work out the position for itself. How to cut that text into tokens is still an open choice."
+        >
+          <GameToTokens />
+        </Figure>
         <p>
           The important part is that each model only ever sees games from one
           rating band. A model trained on 1200-rated games doesn&rsquo;t learn
@@ -93,25 +113,47 @@ export default function HumanLikeChessPost() {
           level of the players it learned from, and hopefully plays like them
           too.
         </p>
+
+        <Figure
+          number={3}
+          caption={
+            <>
+              What White actually played in this position across Lichess blitz,
+              rapid and classical games. Taking the pawn with Nxe5 walks into a
+              known trap (Black answers Qg5), and White wins only 23% of those
+              games at 1200. Lower-rated players fall for it almost twice as
+              often. That difference is exactly what a 1200 model should learn
+              to reproduce. Source: Lichess opening explorer and cloud
+              evaluation, November 2026.
+            </>
+          }
+        >
+          <MoveChoices />
+        </Figure>
         <p>
           For size, I&rsquo;m aiming for a few tens of millions of parameters,
           trained on a GPU for about a day. That&rsquo;s tiny next to modern
           language models, but chess is a much narrower domain than language.
+        </p>
+
+        <Figure
+          number={4}
+          caption="A rough sketch of the model: a standard decoder-only transformer, the same shape as a small language model, reading moves instead of words. The sizes and many of the details will change once I actually start building it."
+        >
+          <TransformerSketch />
+        </Figure>
+
+        <p>
           And since the model is really just predicting text, I&rsquo;ll also
           need to make sure it only ever plays legal moves.
         </p>
-        <p>
-          This is also the final project on my{" "}
-          <Link
-            href="/blog/ml-roadmap"
-            className="underline underline-offset-4 transition-colors hover:text-muted"
-          >
-            machine learning roadmap
-          </Link>
-          : taking the transformer I&rsquo;m building for next-token prediction
-          on text, and seeing whether it can learn a completely different domain
-          from game records alone.
-        </p>
+
+        <Figure
+          number={5}
+          caption="The whole project on one screen: training one model per rating band, then playing with one, move by move."
+        >
+          <SystemOverview />
+        </Figure>
         <p>
           I&rsquo;m still early on this one, so a lot of the details will
           probably change as I go. I&rsquo;ll share code and results here once

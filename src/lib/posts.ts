@@ -24,13 +24,6 @@ export const posts: Post[] = [
       "Chess engines are too strong to learn from, and weakened ones still don't play like people. So I'm training a transformer on Lichess games to play like a real human at a chosen rating.",
   },
   {
-    slug: "ml-roadmap",
-    title: "From MNIST to a Chess Transformer",
-    date: "2026-11-12",
-    excerpt:
-      "My machine learning roadmap for November 2026–January 2027: handwritten digits, next-token prediction, and a transformer chessbot.",
-  },
-  {
     slug: "hello-world",
     title: "Hello World",
     date: "2026-07-15",

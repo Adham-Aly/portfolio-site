@@ -4,12 +4,16 @@
   --background: #f4f1e9; /* warm pale ivory */
   --foreground: #1c1b18; /* warm near-black */
   --muted: #6f6b61; /* warm grey for secondary text */
+  --line: #d9d2c3; /* hairlines and diagram borders */
+  --surface: #ebe6db; /* diagram boxes, one step darker than the page */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
   --font-sans: var(--font-libre-baskerville);
 }
 
